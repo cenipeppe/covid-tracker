@@ -1,5 +1,7 @@
 body{
     font-family: 'Rubik';
+    background-color: rgb(25,25,25);
+    color: rgb(183,183,183);
 }
 .Header{
     display: flex;
@@ -10,4 +12,23 @@ body{
     width: 45px;
     height: auto;
     padding-right: 30px;
+}
+.MuiCardContent-root{
+    background-color: rgb(25,25,25);
+}
+.MuiPaper-root{
+    color: rgb(183,183,183) !important;
+}
+.MuiTypography-colorTextPrimary{
+    color: rgb(183,183,183) !important;
+}
+.MuiTypography-colorTextSecondary{
+    color: rgb(33, 167, 33) !important;
+}
+.MuiPaper-elevation1 {
+    box-shadow: 0px 2px 1px -1px rgba(185,185,185,0.2), 0px 1px 1px 0px 
+    rgba(185,185,185,0.14), 0px 1px 3px 0px rgba(185,185,185,0.12) !important;
+}
+.MuiPaper-rounded{
+    border-radius: 0 !important;
 }
