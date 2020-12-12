@@ -24,11 +24,11 @@ export const fetchDailyData = async () => {
     }
 }
 
-export const countries = async () => {
+export const fetchCountries = async () => {
     try {
         const res = await (await fetch(`${URL}/countries`)).json()
         
-        return res;
+        return res.countries;
     } catch (err) {
         alert('Si è verificato un errore', err)
     }

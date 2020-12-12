@@ -5,6 +5,7 @@ import './App.css'
 import Header from './components/Header'
 import { CircularProgress } from '@material-ui/core'
 import { fetchData } from './api'
+import CountryPicker from './components/CountryPicker'
 
 const App = () => {
 
@@ -22,6 +23,7 @@ const App = () => {
         <div>
             <Header />
             <Cards dataApi={dataApi}/>
+            <CountryPicker />
             <Chart className='Chart'/>
         </div>
         :

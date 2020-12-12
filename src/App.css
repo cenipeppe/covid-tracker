@@ -18,7 +18,7 @@ body{
     width: 110px;
 }
 
-.MuiTypography-colorTextPrimary, .MuiCircularProgress-colorPrimary, .MuiPaper-root{
+.MuiTypography-colorTextPrimary, .MuiCircularProgress-colorPrimary, .MuiPaper-root, select{
     color: rgb(239,239,239) !important;
 }
 .MuiTypography-colorTextSecondary{
@@ -34,4 +34,7 @@ body{
 .Chart{
     width: 85vw;
     margin: auto;
+}
+option{
+    color: black;
 }
