@@ -1,32 +1,31 @@
 import React, { useEffect, useState } from 'react'
 import Cards from './components/Cards'
+import Chart from './components/Chart'
 import './App.css'
 import Header from './components/Header'
+import { CircularProgress } from '@material-ui/core'
+import { fetchData } from './api'
 
 const App = () => {
-    {/* Ajax API Covid19 con Hook useEffect. Salvo la risposta nello state 'dataApi' */}
-    const URL = 'https://covid19.mathdro.id/api'
-    const [dataApi, setDataApi] = useState('');
-    useEffect( ()=> {
-        void (async () => {
-            try {
-                const res = await (await fetch(URL)).json()
 
-                console.log(res)
-                setDataApi(res);
-            } catch (err) {
-                alert('Si è verificato un errore', err)
-            }
+    const [dataApi, setDataApi] = useState('');
+    useEffect( ()=>{
+        void (async () => {
+            setDataApi(await fetchData());
         })()
     }, []
     )
 
-    
     return (
+        (dataApi) 
+        ?
         <div>
             <Header />
             <Cards dataApi={dataApi}/>
+            <Chart className='Chart'/>
         </div>
+        :
+        <CircularProgress />
     )
 }
 
