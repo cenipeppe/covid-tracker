@@ -1,6 +1,7 @@
 import React from 'react'
 import { Grid, Typography } from '@material-ui/core'
 import SingleCard from './SingleCard'
+import { printDate } from '../functions';
 
 const Cards = ({dataApi}) => {
     
@@ -18,7 +19,7 @@ const Cards = ({dataApi}) => {
                 align="center" 
                 gutterBottom
             >
-                Ultimo Aggiornamento: {lastUpdate}
+                Ultimo Aggiornamento: {printDate(lastUpdate)}
             </Typography>
         </div>
     )
