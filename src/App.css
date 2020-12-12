@@ -18,7 +18,7 @@ body{
     width: 110px;
 }
 
-.MuiTypography-colorTextPrimary, .MuiCircularProgress-colorPrimary, .MuiPaper-root, select{
+.MuiTypography-colorTextPrimary, .MuiCircularProgress-colorPrimary, .MuiPaper-root, .MuiNativeSelect-select{
     color: rgb(239,239,239) !important;
 }
 .MuiTypography-colorTextSecondary{
@@ -36,5 +36,14 @@ body{
     margin: auto;
 }
 option{
-    color: black;
+    color: rgb(38,38,38);
+}
+.MuiFormControl-root{
+    background-color: rgba(210,210,210,0.5);
+}
+.CountryPicker{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

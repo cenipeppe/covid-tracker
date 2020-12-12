@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { FormControl, NativeSelect } from '@material-ui/core'
 import { fetchCountries } from '../api'
 
-export default function CountryPicker({handleCountry}) {
+export default function CountryPicker({ handleCountry }) {
 
     const [countries, setCountries] = useState([]);
 
@@ -13,18 +13,22 @@ export default function CountryPicker({handleCountry}) {
     }, []
     )
     return (
-        <FormControl className='formControl' >
-            <NativeSelect onChange={(e) => handleCountry(e)}>
-                <option value='Global' >
-                    Global
-                </option>
-                {countries.map((country, index)=>{
-                    return (
-                    <option key={`${country.iso2}${index}`} value={country.name}>
-                        {country.name}
+        <div className='CountryPicker'>
+            <FormControl variant='filled'>
+                <NativeSelect onChange={(e) => handleCountry(e)}>
+                    <option value='Global' >
+                        Global
                     </option>
-                )})}
-            </NativeSelect>
-        </FormControl>
+                    {countries.map((country, index) => {
+                        return (
+                            <option key={`${country.iso2}${index}`} value={country.name}>
+                                {country.name}
+                            </option>
+                        )
+                    })}
+                </NativeSelect>
+            </FormControl>
+        </div>
+
     )
 }

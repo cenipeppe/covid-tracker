@@ -1,8 +1,9 @@
 const URL = 'https://covid19.mathdro.id/api'
 
-export const fetchData = async () => {
+export const fetchData = async (country) => {
+    const url = (country && country!=='Global') ? `${URL}/countries/${country}` : URL;
     try {
-        const res = await (await fetch(URL)).json()
+        const res = await (await fetch(url)).json()
         return res;
     } catch (err) {
         alert('Si è verificato un errore', err)

@@ -14,9 +14,9 @@ const App = () => {
 
     useEffect( ()=>{
         void (async () => {
-            setDataApi(await fetchData());
+            setDataApi(await fetchData(country));
         })()
-    }, []
+    }, [country]
     )
     const handleCountry= (e)=>{
         e.preventDefault();
