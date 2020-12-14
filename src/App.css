@@ -15,7 +15,6 @@ body{
 }
 .MuiCardContent-root{
     background-color: rgb(25,25,25);
-    width: 110px;
 }
 
 .MuiTypography-colorTextPrimary, .MuiCircularProgress-colorPrimary, .MuiPaper-root, .MuiNativeSelect-select{
