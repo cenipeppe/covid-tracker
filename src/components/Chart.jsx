@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { Line, Bar } from 'react-chartjs-2'
 import { fetchDailyData } from '../api';
 
-const Chart = () => {
+const Chart = ({ data, country }) => {
     const [dailyData,setDailyData]= useState([]);
 
     useEffect(() => {
@@ -25,27 +25,44 @@ const Chart = () => {
                         borderColor: '#ffffff',
                         fill: true
                 }, {
-                        data: dailyData.map(({ deaths }) => deaths),
-                        label: 'Decessi',
-                        borderColor: 'red',
-                        backgroundColor: 'rgba(255, 0, 0, 0.5)',
-                        fill: true
-                    }, {
                         data: dailyData.map(({ recovered }) => recovered),
                         label: 'Ricoveri',
                         borderColor: 'green',
                         backgroundColor: 'rgba(0, 255, 0, 0.5)',
                         fill: true
-                    }]
+                    }, {
+                        data: dailyData.map(({ deaths }) => deaths),
+                        label: 'Decessi',
+                        borderColor: 'red',
+                        backgroundColor: 'rgba(255, 0, 0, 0.5)',
+                        fill: true
+                    }] 
             }}
         />
         :
         <CircularProgress />
     )
 
+    const barChart = (data.confirmed)?
+    <Bar 
+        data={{
+            labels: ['Confermati', 'Ricoveri', 'Morti'],
+            datasets: [{
+                label: 'People',
+                backgroundColor: ['#ffffff', 'green', 'red'],
+                data: [data.confirmed.value, data.recovered.value, data.deaths.value]
+            }]
+        }}
+        options={{
+            legend: {display: false},
+            title: { display: true, text: `Stato attuale in ${country}`}
+        }}
+    />
+    : null
+
     return (
         <div className='Chart'>
-            {lineChart}
+            {(country&&country!=='Global') ? barChart : lineChart}
         </div>
     )
 }

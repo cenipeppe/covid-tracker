@@ -22,17 +22,21 @@ const App = () => {
         e.preventDefault();
         setCountry(e.target.value)
     }
-    console.log(country)
+    
     return (
         (dataApi) 
         ?
         <div>
             <Header />
             <Cards dataApi={dataApi}/>
-            <CountryPicker 
+            <CountryPicker
                 handleCountry={handleCountry}
             />
-            <Chart className='Chart'/>
+            <Chart 
+                className='Chart'
+                data={dataApi}
+                country={country}
+            />
         </div>
         :
         <CircularProgress />
