@@ -8,6 +8,7 @@
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.2.2",
     "chart.js": "^2.9.4",
+    "moment": "^2.29.1",
     "react": "^17.0.1",
     "react-chartjs-2": "^2.11.1",
     "react-countup": "^4.3.3",

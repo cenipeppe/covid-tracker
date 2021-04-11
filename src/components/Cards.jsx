@@ -1,6 +1,7 @@
 import React from 'react'
 import { Grid, Typography } from '@material-ui/core'
 import SingleCard from './SingleCard'
+import moment from 'moment';
 
 const Cards = ({dataApi}) => {
     
@@ -18,7 +19,7 @@ const Cards = ({dataApi}) => {
                 align="center" 
                 gutterBottom
             >
-                Ultimo Aggiornamento: {lastUpdate}
+                Ultimo Aggiornamento: {moment(lastUpdate).format("DD-MMM-YYYY hh:mm")}
             </Typography>
         </div>
     )

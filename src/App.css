@@ -1,48 +1,23 @@
-body{
-    font-family: 'Rubik';
-    background-color: rgb(25,25,25);
-    color: rgb(239,239,239);
+body {
+  font-family: "Rubik";
+  color: rgb(25, 25, 25);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.Header{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.Header__img{
-    width: 45px;
-    height: auto;
-    padding-right: 30px;
+.Header__img {
+  width: 45px;
+  height: auto;
+  padding-right: 30px;
 }
-.MuiCardContent-root{
-    background-color: rgb(25,25,25);
-}
-
-.MuiTypography-colorTextPrimary, .MuiCircularProgress-colorPrimary, .MuiPaper-root, .MuiNativeSelect-select{
-    color: rgb(239,239,239) !important;
-}
-.MuiTypography-colorTextSecondary{
-    color: rgb(33, 167, 33) !important;
-}
-.MuiPaper-elevation1 {
-    box-shadow: 0px 2px 1px -1px rgba(185,185,185,0.2), 0px 1px 1px 0px 
-    rgba(185,185,185,0.14), 0px 1px 3px 0px rgba(185,185,185,0.12) !important;
-}
-.MuiPaper-rounded{
-    border-radius: 0 !important;
-}
-.Chart{
-    width: 85vw;
-    margin: auto;
-}
-option{
-    color: rgb(38,38,38);
-}
-.MuiFormControl-root{
-    background-color: rgba(210,210,210,0.5);
-}
-.CountryPicker{
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.CountryPicker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
